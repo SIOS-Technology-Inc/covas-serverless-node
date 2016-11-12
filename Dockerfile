@@ -7,6 +7,7 @@ RUN apt-get -q update && \
       bash \
       build-essential \
       cpio \
+      cron \
       curl \
       git \
       g++ \
@@ -25,4 +26,7 @@ RUN apt-get -q update && \
     wget -q https://github.com/jpillora/spy/releases/download/1.0.1/spy_1.0.1_linux_amd64.tar.gz && \
     tar xzf spy_1.0.1_linux_amd64.tar.gz && \
     mv spy_1.0.1_linux_amd64/spy /usr/bin && \
-    rm -Rf spy_1.0.1_linux_amd64*
+    rm -Rf spy_1.0.1_linux_amd64* && \
+    echo "Init supervisor" && \
+    mkdir -p /etc/supervisor && \
+    mkdir -p /var/log/supervisor
