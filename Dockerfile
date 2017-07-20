@@ -23,10 +23,10 @@ RUN apt-get -q update && \
     npm install --silent -g yarn && \
     echo "Install Spy filewatcher" && \
     cd /tmp && \
-    wget -q https://github.com/jpillora/spy/releases/download/1.0.1/spy_1.0.1_linux_amd64.tar.gz && \
-    tar xzf spy_1.0.1_linux_amd64.tar.gz && \
-    mv spy_1.0.1_linux_amd64/spy /usr/bin && \
-    rm -Rf spy_1.0.1_linux_amd64* && \
+    wget -q https://github.com/jpillora/spy/releases/download/1.0.1/spy_linux_amd64.gz && \
+    gunzip spy_linux_amd64.gz && \
+    chmod 0755 spy_linux_amd64 && \
+    mv spy_linux_amd64 /usr/bin/spy && \
     echo "Init supervisor" && \
     mkdir -p /etc/supervisor && \
     mkdir -p /var/log/supervisor
