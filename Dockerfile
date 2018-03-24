@@ -1,4 +1,4 @@
-FROM node:6.13.1
+FROM node:8.10.0
 # Debian OS.
 
 RUN apt-get -q update && \
@@ -16,7 +16,6 @@ RUN apt-get -q update && \
       rsync \
       supervisor \
       tree \
-      vim \
       wget \
       zip && \
     npm config set registry http://registry.npmjs.org/ && \
