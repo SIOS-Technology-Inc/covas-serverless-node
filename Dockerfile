@@ -20,6 +20,7 @@ RUN apt-get -q update && \
       zip && \
     npm config set registry http://registry.npmjs.org/ && \
     npm install --silent -g yarn && \
+    chmod 0755 /usr/local/lib/node_modules/yarn/bin/yarn.js && \
     echo "Install Spy filewatcher" && \
     cd /tmp && \
     wget -q https://github.com/jpillora/spy/releases/download/1.0.1/spy_linux_amd64.gz && \
