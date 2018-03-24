@@ -1,4 +1,4 @@
-FROM node:6.11.1
+FROM node:6.13.1
 # Debian OS.
 
 RUN apt-get -q update && \
