@@ -2,6 +2,10 @@
 
 ## Next
 
+## 0.4.0
+
+- Feature: Updated Node to 8.10.0
+
 ## 0.3.0
 
 - Feature: Updated Node to 6.13.1
