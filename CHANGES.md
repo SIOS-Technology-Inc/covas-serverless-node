@@ -2,6 +2,10 @@
 
 ## Next
 
+## 0.3.0
+
+- Feature: Updated Node to 6.13.1
+
 ## 0.2.0
 
 - Bugfix: Spy filewatcher download path was broken
