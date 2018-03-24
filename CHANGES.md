@@ -2,6 +2,10 @@
 
 ## Next
 
+## 0.4.1
+
+- Bugfix: Solved permission error on yarn
+
 ## 0.4.0
 
 - Feature: Updated Node to 8.10.0
