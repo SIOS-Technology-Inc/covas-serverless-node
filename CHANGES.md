@@ -2,6 +2,11 @@
 
 ## Next
 
+## 0.5.0
+
+- Feature: Increased inotify watchers
+- Feature: Added debian backport to retain compatibility
+
 ## 0.4.1
 
 - Bugfix: Solved permission error on yarn
