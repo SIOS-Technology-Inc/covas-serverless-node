@@ -1,7 +1,10 @@
 FROM node:8.10.0
 # Debian OS.
 
-RUN apt-get -q update && \
+RUN echo "deb [check-valid-until=no] http://cdn-fastly.deb.debian.org/debian jessie main" > /etc/apt/sources.list.d/jessie.list && \
+    echo "deb [check-valid-until=no] http://archive.debian.org/debian jessie-backports main" > /etc/apt/sources.list.d/jessie-backports.list && \
+    sed -i '/deb http:\/\/deb.debian.org\/debian jessie-updates main/d' /etc/apt/sources.list && \
+    apt-get -o Acquire::Check-Valid-Until=false update && \
     apt-get -q install -y --no-install-recommends \
       ack-grep \
       bash \
@@ -29,4 +32,7 @@ RUN apt-get -q update && \
     mv spy_linux_amd64 /usr/bin/spy && \
     echo "Init supervisor" && \
     mkdir -p /etc/supervisor && \
-    mkdir -p /var/log/supervisor
+    mkdir -p /var/log/supervisor && \
+    echo "Increasing inotify watchers" && \
+    touch /etc/sysctl.d/crashplan.conf && \
+    echo "fs.inotify.max_user_watches=582222" > /etc/sysctl.d/crashplan.conf
