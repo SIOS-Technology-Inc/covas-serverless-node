@@ -35,4 +35,7 @@ RUN echo "deb [check-valid-until=no] http://cdn-fastly.deb.debian.org/debian jes
     mkdir -p /var/log/supervisor && \
     echo "Increasing inotify watchers" && \
     touch /etc/sysctl.d/crashplan.conf && \
-    echo "fs.inotify.max_user_watches=582222" > /etc/sysctl.d/crashplan.conf
+    echo "fs.inotify.max_user_watches=582222" > /etc/sysctl.d/crashplan.conf && \
+    echo "Install dockerize" && \
+    wget --quiet -O - https://github.com/jwilder/dockerize/releases/download/v0.6.1/dockerize-linux-amd64-v0.6.1.tar.gz | tar zxvf - && \
+    mv dockerize /usr/bin

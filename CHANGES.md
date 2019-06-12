@@ -2,6 +2,10 @@
 
 ## Next
 
+## 0.6.0
+
+- Feature: Installed dockerize
+
 ## 0.5.0
 
 - Feature: Increased inotify watchers
