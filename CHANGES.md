@@ -2,6 +2,10 @@
 
 ## Next
 
+## 0.7.0
+
+- Feature: Installed parallel
+
 ## 0.6.0
 
 - Feature: Installed dockerize
