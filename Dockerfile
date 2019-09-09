@@ -16,6 +16,7 @@ RUN echo "deb [check-valid-until=no] http://cdn-fastly.deb.debian.org/debian jes
       g++ \
       htop \
       jq \
+      parallel \
       rsync \
       supervisor \
       tree \
