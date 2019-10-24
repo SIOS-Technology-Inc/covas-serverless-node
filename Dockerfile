@@ -1,4 +1,4 @@
-FROM node:8.10.0
+FROM node:10.17.0-buster
 # Debian OS.
 
 RUN echo "deb [check-valid-until=no] http://cdn-fastly.deb.debian.org/debian jessie main" > /etc/apt/sources.list.d/jessie.list && \
