@@ -2,6 +2,10 @@
 
 ## Next
 
+## 0.9.0
+
+- Feature: Change npm registory
+
 ## 0.8.0
 
 - Feature: Upgraded base image to node:10.17.0-buster
