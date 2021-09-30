@@ -22,7 +22,7 @@ RUN echo "deb [check-valid-until=no] http://cdn-fastly.deb.debian.org/debian jes
       tree \
       wget \
       zip && \
-    npm config set registry http://registry.npmjs.org/ && \
+    npm config set registry https://registry.npmjs.org/ && \
     npm install --silent -g yarn && \
     chmod 0755 /usr/local/lib/node_modules/yarn/bin/yarn.js && \
     echo "Install Spy filewatcher" && \
