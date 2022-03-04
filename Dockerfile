@@ -1,9 +1,8 @@
-FROM node:10.17.0-buster
+FROM node:16.14.0-buster
 # Debian OS.
 
-RUN echo "deb [check-valid-until=no] http://cdn-fastly.deb.debian.org/debian jessie main" > /etc/apt/sources.list.d/jessie.list && \
-    echo "deb [check-valid-until=no] http://archive.debian.org/debian jessie-backports main" > /etc/apt/sources.list.d/jessie-backports.list && \
-    sed -i '/deb http:\/\/deb.debian.org\/debian jessie-updates main/d' /etc/apt/sources.list && \
+RUN echo "deb [check-valid-until=no] http://cdn-fastly.deb.debian.org/debian buster main" > /etc/apt/sources.list.d/buster.list && \
+    sed -i '/deb http:\/\/deb.debian.org\/debian buster-updates main/d' /etc/apt/sources.list && \
     apt-get -o Acquire::Check-Valid-Until=false update && \
     apt-get -q install -y --no-install-recommends \
       ack-grep \
@@ -23,8 +22,6 @@ RUN echo "deb [check-valid-until=no] http://cdn-fastly.deb.debian.org/debian jes
       wget \
       zip && \
     npm config set registry https://registry.npmjs.org/ && \
-    npm install --silent -g yarn && \
-    chmod 0755 /usr/local/lib/node_modules/yarn/bin/yarn.js && \
     echo "Install Spy filewatcher" && \
     cd /tmp && \
     wget -q https://github.com/jpillora/spy/releases/download/1.0.1/spy_linux_amd64.gz && \

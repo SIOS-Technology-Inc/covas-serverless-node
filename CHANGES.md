@@ -2,6 +2,10 @@
 
 ## Next
 
+## 1.0.0
+
+- Feature: Updated Node to 16.14.0
+
 ## 0.9.0
 
 - Feature: Change npm registory
